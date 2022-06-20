@@ -1,4 +1,5 @@
 import { useCharacters } from "../hooks/useCharacters";
+import { Link } from "react-router-dom";
 
 function CharactersList() {
   const { loading, error, data } = useCharacters();
@@ -21,11 +22,11 @@ function CharactersList() {
         "justify-content": "space-evenly",
       }}
     >
-      {data.characters.map((character) => (
-        <div>
+      {data.characters.results.map((character) => (
+        <Link to={`/${character.id}`}>
           <img src={character.image} alt="char img" />
           <h2>{character.name}</h2>
-        </div>
+        </Link>
       ))}
     </div>
   );
