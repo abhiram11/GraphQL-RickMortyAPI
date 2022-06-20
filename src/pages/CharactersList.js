@@ -3,7 +3,7 @@ import { useCharacters } from "../hooks/useCharacters";
 function CharactersList() {
   const { loading, error, data } = useCharacters();
 
-  console.log(loading, error, data);
+  console.log("Ch List:", loading, error, data);
 
   if (loading) {
     return <div>Loading...</div>;
