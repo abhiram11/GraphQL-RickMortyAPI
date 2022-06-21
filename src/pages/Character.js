@@ -13,7 +13,7 @@ function Character() {
 
   return (
     <div>
-      <img src={data.character.image} width={720} height={720} alt="chr" />
+      <img src={data.character.image} width={240} height={240} alt="chr" />
       <h1>{data.character.name}</h1>
       <p>{data.character.gender}</p>
       <div>
